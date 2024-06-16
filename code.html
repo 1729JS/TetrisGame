@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+        }
+        canvas {
+            border: 1px solid white;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .score-container {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body class>
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    <div class="controls">
+        <button id="startButton">Start</button>
+        <button id="pauseButton">Pause</button>
+    </div>
+    <div class="score-container">
+        Score: <span id="score">0</span>
+    </div>
+    <div class="game-over" id="gameOver">Game Over</div>
+    <script src="game.js"></script>
+</body>
+</html>
